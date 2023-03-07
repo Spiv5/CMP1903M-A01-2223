@@ -13,20 +13,24 @@ namespace CMP1903M_A01_2223
         //Value: numbers 1 - 13
         //Suit: numbers 1 - 4
         //The 'set' methods for these properties could have some validation
+        
 
+        //Initialises private variables and names of each of the suits and values
         private int cardValue;
         private int cardSuit;
 
         private string[] suitName = { "Spades","Clubs","Diamonds","Hearts" };
         private string[] valueName = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King" };
         
+
+        //Constructor of the Card class, sets the public value to the passed parameters
         public Card(int _value, int _suit)
         {
             this.Value = _value;
             this.Suit = _suit;
         }
 
-
+        //Public accessor for the Value and Suit variables with validation 
 
         public int Value
         {
@@ -54,6 +58,8 @@ namespace CMP1903M_A01_2223
                 else { Console.WriteLine("Invalid Suit"); }
             }
         }
+
+        //Overrides the default class ToString method to allow easier output of the Card's data
 
         public override string ToString()
         {
