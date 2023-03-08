@@ -37,7 +37,7 @@ namespace CMP1903M_A01_2223
             get { return cardValue; }
             set
             {
-                if (value >= 1 && value <= 13)
+                if (value >= 1 && value <= 13) //If someone uses the class and instantiates there own card object this validates whether it has a valid value
                 {
                     cardValue = value;
                 }
@@ -51,7 +51,7 @@ namespace CMP1903M_A01_2223
             get { return cardSuit; }
             set
             {
-                if (value >= 1 && value <= 4)
+                if (value >= 1 && value <= 4) //If someone uses the class and instantiates there own card object this validates whether it has a valid suit
                 {
                     cardSuit = value;
                 }
@@ -63,7 +63,6 @@ namespace CMP1903M_A01_2223
 
         public override string ToString()
         {
-            //return $"Value: {Value} Suit: {Suit}";
             return $"{valueName[Value-1]} of {suitName[Suit-1]}";
         }
 

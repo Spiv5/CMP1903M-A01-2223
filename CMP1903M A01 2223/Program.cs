@@ -55,12 +55,17 @@ namespace CMP1903M_A01_2223
             {
                 Console.WriteLine("How many cards would you like to deal?");
                 
-                try
+                try //Catches erroneous input
                 {
                     int amountToDeal = Convert.ToInt32(Console.ReadLine());
                     if (amountToDeal > pack.pack.Count)
                     {
                         Console.WriteLine("There aren't that many cards in the deck!");
+                        Menu(pack);
+                    }
+                    else if (amountToDeal < 1)
+                    {
+                        Console.WriteLine("You need to deal at least one card!");
                         Menu(pack);
                     }
                     pack.dealCards(amountToDeal);

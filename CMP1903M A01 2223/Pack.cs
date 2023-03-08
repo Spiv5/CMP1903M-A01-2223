@@ -71,9 +71,9 @@ namespace CMP1903M_A01_2223
                 List<Card> tempHalf1 = new List<Card>(); //Creates two halves of the deck and creates a temporary deck
                 List<Card> tempHalf2 = new List<Card>();
 
-                tempHalf1 = tempPack.Take(tempPack.Count() / 2).ToList();
+                tempHalf1 = tempPack.Take(tempPack.Count() / 2).ToList(); //Takes the first and second half of the temp pack 
                 tempHalf2 = tempPack.Skip(tempPack.Count() / 2).ToList();
-                tempPack = new List<Card>();
+                tempPack = new List<Card>(); //Resets temp pack 
 
                 
                 for (int i = tempPack.Count() / 2; i < 26; i++ ) //i = half the deck, for each iteration add one card from each half
@@ -122,11 +122,11 @@ namespace CMP1903M_A01_2223
 
         }
 
-        //Displays all of the cards in the pack at the point the function is called
+        //Displays all of the cards in the pack 
         public void displayPack()
         {
             Console.WriteLine();
-            foreach (Card c in this.pack)
+            foreach (Card c in this.pack) //Loops through each card in the pack and prints it 
             {
                 Console.WriteLine(c);
             }
